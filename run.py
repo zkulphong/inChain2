@@ -6,8 +6,8 @@ class run:
     def __init__(self, data):
         self.doctors = []
         self.parse(data)
-        print self.doctors[0].getName()
-        #print "test"
+        #print self.doctors[0].getName()
+        ##print "test"
 
     def parse(self, data):
         doctorFirstName = data['doctorfirstname']
@@ -21,11 +21,11 @@ class run:
         check_doc = True
         count = 0
         index = 0
-        print index
+        #print index
         while index < len(self.doctors):
-            print index
+            #print index
             if (doctorFirstName + doctorLastName in self.doctors[index].getName()):
-                print "horse"
+                #print "horse"
                 check_doc = False
                 count = index
             index = index + 1
@@ -35,5 +35,5 @@ class run:
             self.doctors.append(new_doctor)
 
         else:
-            print "tostito"
+            #print "tostito"
             self.doctors[count].addPatient(patientFirstName, patientLastName, diagnosis, diagnosisDate, conditionStart)
